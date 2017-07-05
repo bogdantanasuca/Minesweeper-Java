@@ -78,10 +78,29 @@ public class GUI extends JFrame {
                         g.setColor(Color.yellow);
                     }
 
-                    if (mx >= spacing + i * 80 + 2 && mx < i * 80 + 80 - spacing + 2 && my >= spacing + j * 80 + 106 && my < j * 80 + 186 - spacing) {
-                        g.setColor(Color.red);
+                    if (revealed[i][j] == true) {
+                        g.setColor(Color.white);
+                        if (mines[i][j] == 1) {
+                            g.setColor(Color.red);
+                        }
+                    }
+
+                    if (mx >= spacing + i * 80 + spacing / 2 && mx < i * 80 + 80 - spacing + spacing / 2 && my >= spacing + j * 80 + 106 && my < j * 80 + 186 - spacing) {
+                        g.setColor(Color.lightGray);
                     }
                     g.fillRect(spacing + i * 80, spacing + j * 80 + 80, 80 - 2 * spacing, 80 - 2 * spacing);
+
+                    if (revealed[i][j] == true) {
+                        g.setColor(Color.black);
+                        if (mines[i][j] == 0) {
+                            g.setFont(new Font("Tahome", Font.BOLD, 40));
+                            g.drawString(Integer.toString(neighbours[i][j]), i * 80 + 27, j * 80 + 80 + 55);
+                        } else {
+                            g.fillRect(+i * 80 + 10 + 20, j * 80 + 80 + 20, 20, 40);
+                            g.fillRect(+i * 80 + 20, j * 80 + 80 + 10 + 20, 40, 20);
+                            g.fillRect(i * 80 + 5 + 20, j * 80 + 80 + 5 + 20, 30, 30);
+                        }
+                    }
                 }
             }
         }
@@ -171,7 +190,7 @@ public class GUI extends JFrame {
     public int inBoxX() {
         for (int i = 0; i < 16; i++) {
             for (int j = 0; j < 9; j++) {
-                if (mx >= spacing + i * 80 + 2 && mx < i * 80 + 80 - spacing + 2 && my >= spacing + j * 80 + 106 && my < j * 80 + 186 - spacing) {
+                if (mx >= spacing + i * 80 + spacing / 2 && mx < i * 80 + 80 - spacing + spacing / 2 && my >= spacing + j * 80 + 106 && my < j * 80 + 186 - spacing) {
                     return i;
                 }
             }
@@ -182,7 +201,7 @@ public class GUI extends JFrame {
     public int inBoxY() {
         for (int i = 0; i < 16; i++) {
             for (int j = 0; j < 9; j++) {
-                if (mx >= spacing + i * 80 + 2 && mx < i * 80 + 80 - spacing + 2 && my >= spacing + j * 80 + 106 && my < j * 80 + 186 - spacing) {
+                if (mx >= spacing + i * 80 + spacing / 2 && mx < i * 80 + 80 - spacing + spacing / 2 && my >= spacing + j * 80 + 106 && my < j * 80 + 186 - spacing) {
                     return j;
                 }
             }
