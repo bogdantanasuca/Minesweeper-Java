@@ -35,6 +35,9 @@ public class GUI extends JFrame {
         this.setVisible(true);
         this.setResizable(false);
 
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width / 2 - this.getSize().width / 2, dim.height / 2 - this.getSize().height / 2);
+
         for (int i = 0; i < 16; i++) {
             for (int j = 0; j < 9; j++) {
                 if (rand.nextInt(100) < 20) {

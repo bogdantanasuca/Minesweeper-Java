@@ -7,8 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a14b66d-f67c-41e7-8d24-a9b7382a30b1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Minesweeper/Minesweeper.jar" afterPath="$PROJECT_DIR$/out/artifacts/Minesweeper/Minesweeper.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minesweeper/GUI$Board.class" afterPath="$PROJECT_DIR$/out/production/Minesweeper/GUI$Board.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minesweeper/GUI$Click.class" afterPath="$PROJECT_DIR$/out/production/Minesweeper/GUI$Click.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minesweeper/GUI$Move.class" afterPath="$PROJECT_DIR$/out/production/Minesweeper/GUI$Move.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minesweeper/GUI.class" afterPath="$PROJECT_DIR$/out/production/Minesweeper/GUI.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI.java" afterPath="$PROJECT_DIR$/src/GUI.java" />
     </list>
@@ -48,8 +51,8 @@
       <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="139" column="36" lean-forward="false" selection-start-line="139" selection-start-column="36" selection-end-line="139" selection-end-column="36" />
+            <state relative-caret-position="289">
+              <caret line="38" column="99" lean-forward="false" selection-start-line="38" selection-start-column="99" selection-end-line="38" selection-end-column="99" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -626,12 +629,20 @@
       <workItem from="1499181275787" duration="6521000" />
       <workItem from="1499234627725" duration="6285000" />
       <workItem from="1499268465017" duration="4583000" />
-      <workItem from="1499279064811" duration="611000" />
+      <workItem from="1499279064811" duration="951000" />
     </task>
+    <task id="LOCAL-00001" summary="Creating a smiley">
+      <created>1499279772430</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1499279772430</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18000000" />
+    <option name="totallyTimeSpent" value="18340000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -685,7 +696,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Creating a smiley" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating a smiley" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -763,8 +775,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="139" column="36" lean-forward="false" selection-start-line="139" selection-start-column="36" selection-end-line="139" selection-end-column="36" />
+        <state relative-caret-position="289">
+          <caret line="38" column="99" lean-forward="false" selection-start-line="38" selection-start-column="99" selection-end-line="38" selection-end-column="99" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
