@@ -12,8 +12,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minesweeper/GUI$Click.class" afterPath="$PROJECT_DIR$/out/production/Minesweeper/GUI$Click.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minesweeper/GUI$Move.class" afterPath="$PROJECT_DIR$/out/production/Minesweeper/GUI$Move.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minesweeper/GUI.class" afterPath="$PROJECT_DIR$/out/production/Minesweeper/GUI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minesweeper/Main.class" afterPath="$PROJECT_DIR$/out/production/Minesweeper/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI.java" afterPath="$PROJECT_DIR$/src/GUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
     </list>
     <manually-removed-from-ignored>
       <directory path="$PROJECT_DIR$/out/" />
@@ -45,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="15" column="88" lean-forward="false" selection-start-line="15" selection-start-column="88" selection-end-line="15" selection-end-column="88" />
+              <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -54,8 +56,8 @@
       <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1910">
-              <caret line="181" column="22" lean-forward="false" selection-start-line="181" selection-start-column="22" selection-end-line="181" selection-end-column="22" />
+            <state relative-caret-position="533">
+              <caret line="314" column="53" lean-forward="false" selection-start-line="314" selection-start-column="53" selection-end-line="314" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,6 +77,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>happiness</find>
+      <find>getSmileyCenterX</find>
+      <find>get</find>
+      <find>SmileyCenter</find>
+      <find>smileyCenterY</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -589,7 +595,7 @@
       <workItem from="1499234627725" duration="6285000" />
       <workItem from="1499268465017" duration="4583000" />
       <workItem from="1499279064811" duration="4554000" />
-      <workItem from="1499284204889" duration="5775000" />
+      <workItem from="1499284204889" duration="12663000" />
     </task>
     <task id="LOCAL-00001" summary="Creating a smiley">
       <created>1499279772430</created>
@@ -647,11 +653,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499289583477</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Displaying a win/lose message">
+      <created>1499290729601</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1499290729601</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27718000" />
+    <option name="totallyTimeSpent" value="34606000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -750,12 +763,13 @@
     <MESSAGE value="Creating a time counter" />
     <MESSAGE value="Creating a reset method" />
     <MESSAGE value="Checking victory status" />
-    <option name="LAST_COMMIT_MESSAGE" value="Checking victory status" />
+    <MESSAGE value="Displaying a win/lose message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Displaying a win/lose message" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -847,15 +861,23 @@
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="15" column="88" lean-forward="false" selection-start-line="15" selection-start-column="88" selection-end-line="15" selection-end-column="88" />
+          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="58" column="19" lean-forward="false" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1910">
-          <caret line="181" column="22" lean-forward="false" selection-start-line="181" selection-start-column="22" selection-end-line="181" selection-end-column="22" />
+        <state relative-caret-position="533">
+          <caret line="314" column="53" lean-forward="false" selection-start-line="314" selection-start-column="53" selection-end-line="314" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

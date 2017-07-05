@@ -13,7 +13,7 @@ public class Main implements Runnable {
             gui.repaint();
             if (gui.resseter == false) {
                 gui.checkVictoryStatus();
-                System.out.println("Victory: " + gui.victory + ", Defeat: " + gui.defeat);
+                //System.out.println("Victory: " + gui.victory + ", Defeat: " + gui.defeat);
             }
         }
     }
