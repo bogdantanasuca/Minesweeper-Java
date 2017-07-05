@@ -8,11 +8,18 @@ import java.awt.*;
 
 public class GUI extends JFrame {
 
+    Date startDate = new Date();
+
     public int mx = -100;
     public int my = -100;
 
     public int smileyX = 605;
     public int smileyY = 5;
+
+    public int timeX = 1130;
+    public int timeY = 5;
+
+    public int sec = 0;
 
     public boolean happiness = true;
 
@@ -124,10 +131,15 @@ public class GUI extends JFrame {
                             g.fillRect(i * 80 + 5 + 20, j * 80 + 80 + 5 + 20, 30, 30);
                             g.fillRect(i * 80 + 38, j * 80 + 80 + 15, 4, 50);
                             g.fillRect(i * 80 + 15, j * 80 + 80 + 38, 50, 4);
+                            happiness = false;
+
                         }
                     }
                 }
             }
+
+
+            //smiley painting
 
             g.setColor(Color.yellow);
             g.fillOval(smileyX, smileyY, 70, 70);
@@ -144,6 +156,25 @@ public class GUI extends JFrame {
                 g.fillRect(smileyX + 48, smileyY + 50, 5, 5);
             }
 
+            //time counter paiting
+
+            g.setColor(Color.black);
+            g.fillRect(timeX, timeY, 140, 70);
+            sec = (int) ((new Date().getTime() - startDate.getTime()) / 1000);
+            g.setColor(Color.white);
+            g.setFont(new Font("Tahoma", Font.PLAIN, 80));
+            if (sec > 999) {
+                g.setColor(Color.red);
+                sec = 999;
+                happiness = false;
+            }
+            if (sec < 10) {
+                g.drawString("00" + Integer.toString(sec), timeX + 5, timeY + 65);
+            } else if (sec < 100) {
+                g.drawString("0" + Integer.toString(sec), timeX + 5, timeY + 65);
+            } else {
+                g.drawString(Integer.toString(sec), timeX + 5, timeY + 65);
+            }
         }
     }
 
