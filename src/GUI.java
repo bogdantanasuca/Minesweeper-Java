@@ -24,6 +24,9 @@ public class GUI extends JFrame {
     public int timeX = 1130;
     public int timeY = 5;
 
+    public int vicMesX = 100;
+    public int vicMesY = 70;
+
     public int sec = 0;
 
     public boolean happiness = true;
@@ -96,11 +99,11 @@ public class GUI extends JFrame {
             for (int i = 0; i < 16; i++) {
                 for (int j = 0; j < 9; j++) {
                     g.setColor(Color.gray);
-                    /**
+
                      if (mines[i][j] == 1) {
                      g.setColor(Color.yellow);
                      }
-                     */
+
                     if (revealed[i][j] == true) {
                         g.setColor(Color.white);
                         if (mines[i][j] == 1) {
@@ -168,7 +171,6 @@ public class GUI extends JFrame {
 
             g.setColor(Color.black);
             g.fillRect(timeX, timeY, 140, 70);
-            //sec = (int) ((new Date().getTime() - startDate.getTime()) / 1000);
             g.setColor(Color.white);
             if (victory == true || defeat == true) {
                 if (victory == true) {
@@ -184,6 +186,7 @@ public class GUI extends JFrame {
                 g.setColor(Color.red);
                 sec = 999;
                 happiness = false;
+                defeat = true;
             }
             if (sec < 10) {
                 g.drawString("00" + Integer.toString(sec), timeX + 5, timeY + 65);
@@ -192,6 +195,19 @@ public class GUI extends JFrame {
             } else {
                 g.drawString(Integer.toString(sec), timeX + 5, timeY + 65);
             }
+
+            //win/lose message paiting
+
+            if (victory == true || defeat == true) {
+                if (victory == true) {
+                    g.setColor(Color.green);
+                    g.drawString("You won!", vicMesX, vicMesY);
+                } else {
+                    g.setColor(Color.red);
+                    g.drawString("You lost!", vicMesX, vicMesY);
+                }
+            }
+
         }
     }
 
@@ -223,6 +239,9 @@ public class GUI extends JFrame {
          */
         @Override
         public void mouseClicked(MouseEvent e) {
+
+            mx = e.getX();
+            my = e.getY();
 
             if (inBoxX() != -1 && inBoxY() != -1) {
                 revealed[inBoxX()][inBoxY()] = true;
