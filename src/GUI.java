@@ -10,8 +10,12 @@ public class GUI extends JFrame {
 
     public int mx = -100;
     public int my = -100;
+
     int spacing = 5;
+
     Random rand = new Random();
+
+    int neighs = 0;
 
     int[][] mines = new int[16][9];
     int[][] neighbours = new int[16][9];
@@ -33,7 +37,21 @@ public class GUI extends JFrame {
                 } else {
                     mines[i][j] = 0;
                 }
+                revealed[i][j] = false;
+            }
+        }
 
+        for (int i = 0; i < 16; i++) {
+            for (int j = 0; j < 9; j++) {
+                neighs = 0;
+                for (int m = 0; m < 16; m++) {
+                    for (int n = 0; n < 9; n++) {
+                        if (!(m == i && n == j))
+                            if (isN(i, j, m, n) == true)
+                                neighs++;
+                    }
+                }
+                neighbours[i][j] = neighs;
             }
         }
 
@@ -55,11 +73,11 @@ public class GUI extends JFrame {
             for (int i = 0; i < 16; i++) {
                 for (int j = 0; j < 9; j++) {
                     g.setColor(Color.gray);
-                    /*
+
                     if (mines[i][j] == 1) {
                         g.setColor(Color.yellow);
                     }
-                    */
+
                     if (mx >= spacing + i * 80 + 2 && mx < i * 80 + 80 - spacing + 2 && my >= spacing + j * 80 + 106 && my < j * 80 + 186 - spacing) {
                         g.setColor(Color.red);
                     }
@@ -99,7 +117,11 @@ public class GUI extends JFrame {
         public void mouseClicked(MouseEvent e) {
 
             if (inBoxX() != -1 && inBoxY() != -1) {
-                System.out.println("The mouse is in the [" + inBoxX() + "," + inBoxY() + "]");
+                revealed[inBoxX()][inBoxY()] = true;
+            }
+
+            if (inBoxX() != -1 && inBoxY() != -1) {
+                System.out.println("The mouse is in the [" + inBoxX() + "," + inBoxY() + "],Number of mine neigh:" + neighbours[inBoxX()][inBoxY()]);
             } else {
                 System.out.println("The Pointer is not inside any box");
             }
@@ -168,5 +190,10 @@ public class GUI extends JFrame {
         return -1;
     }
 
-
+    public boolean isN(int mX, int mY, int cX, int cY) {
+        if (mX - cX < 2 && mX - cX > -2 && mY - cY < 2 && mY - cY > -2 && mines[cX][cY] == 1) {
+            return true;
+        }
+        return false;
+    }
 }
