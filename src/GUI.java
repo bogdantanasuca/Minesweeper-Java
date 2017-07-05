@@ -8,6 +8,8 @@ import java.awt.*;
 
 public class GUI extends JFrame {
 
+    public boolean resseter = false;
+
     Date startDate = new Date();
 
     public int mx = -100;
@@ -166,8 +168,17 @@ public class GUI extends JFrame {
 
             g.setColor(Color.black);
             g.fillRect(timeX, timeY, 140, 70);
-            sec = (int) ((new Date().getTime() - startDate.getTime()) / 1000);
+            //sec = (int) ((new Date().getTime() - startDate.getTime()) / 1000);
             g.setColor(Color.white);
+            if (victory == true || defeat == true) {
+                if (victory == true) {
+                    g.setColor(Color.green);
+                } else {
+                    g.setColor(Color.red);
+                }
+            } else {
+                sec = (int) ((new Date().getTime() - startDate.getTime()) / 1000);
+            }
             g.setFont(new Font("Tahoma", Font.PLAIN, 80));
             if (sec > 999) {
                 g.setColor(Color.red);
@@ -268,7 +279,47 @@ public class GUI extends JFrame {
         }
     }
 
+    public void checkVictoryStatus() {
+        for (int i = 0; i < 16; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (revealed[i][j] == true && mines[i][j] == 1) {
+                    defeat = true;
+                    happiness = false;
+                }
+            }
+        }
+        if (totalBoxesReveled() >= 144 - totalMines()) {
+            victory = true;
+        }
+    }
+
+    public int totalMines() {
+        int total = 0;
+        for (int i = 0; i < 16; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (mines[i][j] == 1) {
+                    total++;
+                }
+            }
+        }
+        return total;
+    }
+
+    public int totalBoxesReveled() {
+        int total = 0;
+        for (int i = 0; i < 16; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (revealed[i][j] == true) {
+                    total++;
+                }
+            }
+        }
+        return total;
+    }
+
     public void resetAll() {
+
+        resseter = true;
 
         startDate = new Date();
         happiness = true;
@@ -300,6 +351,7 @@ public class GUI extends JFrame {
                 neighbours[i][j] = neighs;
             }
         }
+        resseter = false;
     }
 
     public int inBoxX() {
