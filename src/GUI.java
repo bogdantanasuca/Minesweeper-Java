@@ -11,6 +11,11 @@ public class GUI extends JFrame {
     public int mx = -100;
     public int my = -100;
 
+    public int smileyX = 605;
+    public int smileyY = 5;
+
+    public boolean happiness = true;
+
     int spacing = 5;
 
     Random rand = new Random();
@@ -120,6 +125,22 @@ public class GUI extends JFrame {
                     }
                 }
             }
+
+            g.setColor(Color.yellow);
+            g.fillOval(smileyX, smileyY, 70, 70);
+            g.setColor(Color.black);
+            g.fillOval(smileyX + 15, smileyY + 20, 10, 10);
+            g.fillOval(smileyX + 45, smileyY + 20, 10, 10);
+            if (happiness == true) {
+                g.fillRect(smileyX + 20, smileyY + 50, 30, 5);
+                g.fillRect(smileyX + 17, smileyY + 45, 5, 5);
+                g.fillRect(smileyX + 48, smileyY + 45, 5, 5);
+            } else {
+                g.fillRect(smileyX + 20, smileyY + 45, 30, 5);
+                g.fillRect(smileyX + 17, smileyY + 50, 5, 5);
+                g.fillRect(smileyX + 48, smileyY + 50, 5, 5);
+            }
+
         }
     }
 
