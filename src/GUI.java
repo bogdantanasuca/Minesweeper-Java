@@ -92,13 +92,30 @@ public class GUI extends JFrame {
 
                     if (revealed[i][j] == true) {
                         g.setColor(Color.black);
-                        if (mines[i][j] == 0) {
+                        if (mines[i][j] == 0 && neighbours[i][j] != 0) {
+                            if (neighbours[i][j] == 1) {
+                                g.setColor(Color.blue);
+                            } else if (neighbours[i][j] == 2) {
+                                g.setColor(Color.green);
+                            } else if (neighbours[i][j] == 3) {
+                                g.setColor(Color.red);
+                            } else if (neighbours[i][j] == 4) {
+                                g.setColor(new Color(0, 0, 128));
+                            } else if (neighbours[i][j] == 5) {
+                                g.setColor(new Color(178, 34, 34));
+                            } else if (neighbours[i][j] == 6) {
+                                g.setColor(new Color(72, 209, 204));
+                            } else if (neighbours[i][j] == 8) {
+                                g.setColor(Color.darkGray);
+                            }
                             g.setFont(new Font("Tahome", Font.BOLD, 40));
                             g.drawString(Integer.toString(neighbours[i][j]), i * 80 + 27, j * 80 + 80 + 55);
-                        } else {
+                        } else if (mines[i][j] == 1) {
                             g.fillRect(+i * 80 + 10 + 20, j * 80 + 80 + 20, 20, 40);
                             g.fillRect(+i * 80 + 20, j * 80 + 80 + 10 + 20, 40, 20);
                             g.fillRect(i * 80 + 5 + 20, j * 80 + 80 + 5 + 20, 30, 30);
+                            g.fillRect(i * 80 + 38, j * 80 + 80 + 15, 4, 50);
+                            g.fillRect(i * 80 + 15, j * 80 + 80 + 38, 50, 4);
                         }
                     }
                 }
