@@ -295,12 +295,24 @@ public class GUI extends JFrame {
         @Override
         public void mouseClicked(MouseEvent e) {
 
+
+        }
+
+
+        /**
+         * Invoked when a mouse button has been pressed on a component.
+         *
+         * @param e
+         */
+        @Override
+        public void mousePressed(MouseEvent e) {
+
             mx = e.getX();
             my = e.getY();
 /**
-            if (inBoxX() != -1 && inBoxY() != -1) {
-                revealed[inBoxX()][inBoxY()] = true;
-            }
+ if (inBoxX() != -1 && inBoxY() != -1) {
+ revealed[inBoxX()][inBoxY()] = true;
+ }
  */
             if (inBoxX() != -1 && inBoxY() != -1) {
                 System.out.println("The mouse is in the [" + inBoxX() + "," + inBoxY() + "],Number of mine neigh:" + neighbours[inBoxX()][inBoxY()]);
@@ -341,16 +353,6 @@ public class GUI extends JFrame {
                     System.out.println("In flagger is false");
                 }
             }
-        }
-
-
-        /**
-         * Invoked when a mouse button has been pressed on a component.
-         *
-         * @param e
-         */
-        @Override
-        public void mousePressed(MouseEvent e) {
 
         }
 
