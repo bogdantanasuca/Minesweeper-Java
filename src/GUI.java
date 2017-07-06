@@ -110,11 +110,11 @@ public class GUI extends JFrame {
             for (int i = 0; i < 16; i++) {
                 for (int j = 0; j < 9; j++) {
                     g.setColor(Color.gray);
-
+/**
                     if (mines[i][j] == 1) {
                         g.setColor(Color.yellow);
                     }
-
+ */
                     if (revealed[i][j] == true) {
                         g.setColor(Color.white);
                         if (mines[i][j] == 1) {
